@@ -16,8 +16,8 @@ public class MainApp {
       Car car1 = context.getBean(Car.class,"bmv",1232);
       Car car2 = context.getBean(Car.class,"audi",234521);
 
-      userService.add(new User("User1", "Lastname1", "user1@mail.ru",car1));
-      userService.add(new User("User2", "Lastname2", "user2@mail.ru",car2));
+      userService.add(context.getBean(User.class,"User1", "Lastname1", "user1@mail.ru",car1));
+      userService.add(context.getBean(User.class,"User2", "Lastname2", "user2@mail.ru",car2));
 
       User user = userService.getUserWithCar(car1);
 
